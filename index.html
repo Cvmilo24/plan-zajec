@@ -3,34 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plan Zajęć - Marzec 2026</title>
+    <title>Plan Zajęć - Luty/Marzec 2026</title>
     <style>
         :root {
             --primary: #2e7d32;
-            --secondary: #1b5e20;
             --bg: #f0f2f5;
             --card: #ffffff;
             --accent: #ffd700;
+            --wyklad: #2196f3;
+            --cwiczenia: #ff9800;
+            --lektorat: #9c27b0;
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', Roboto, sans-serif;
             background-color: var(--bg);
             margin: 0;
             padding: 10px;
             padding-bottom: 50px;
         }
 
-        header {
-            text-align: center;
-            padding: 20px 0;
-            color: var(--primary);
-        }
+        header { text-align: center; padding: 15px 0; color: var(--primary); border-bottom: 2px solid var(--primary); margin-bottom: 20px; }
 
-        .day-section {
-            margin-bottom: 20px;
-            scroll-margin-top: 15px;
-        }
+        .day-section { margin-bottom: 25px; scroll-margin-top: 15px; }
 
         .date-header {
             background: var(--primary);
@@ -43,86 +38,87 @@
             align-items: center;
         }
 
-        .today .date-header { background: #004d40; border: 2px solid var(--accent); }
+        .today .date-header { background: #1b5e20; border: 2px solid var(--accent); }
         .today-badge { display: none; background: var(--accent); color: black; padding: 2px 8px; border-radius: 4px; font-size: 0.7em; }
         .today .today-badge { display: block; }
 
-        .classes { background: var(--card); border-radius: 0 0 12px 12px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .classes { background: var(--card); border-radius: 0 0 12px 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden; }
 
         .class-item {
             padding: 15px;
             border-bottom: 1px solid #eee;
-            border-left: 4px solid transparent;
+            border-left: 6px solid #ccc;
         }
         .class-item:last-child { border-bottom: none; }
-        .type-wyklad { border-left-color: #2196f3; }
-        .type-cwiczenia { border-left-color: #ff9800; }
-        .type-lektorat { border-left-color: #9c27b0; }
-        .type-spec { border-left-color: #f44336; }
 
-        .time-row { display: flex; justify-content: space-between; font-size: 0.85em; font-weight: bold; color: #555; margin-bottom: 5px; }
-        .subject { font-size: 1.1em; font-weight: bold; color: #000; margin-bottom: 3px; }
-        .teacher { font-size: 0.9em; color: #666; }
-        .room { color: var(--primary); }
+        .type-wyklad { border-left-color: var(--wyklad); }
+        .type-cwiczenia { border-left-color: var(--cwiczenia); }
+        .type-lektorat { border-left-color: var(--lektorat); }
 
-        .event { background: #fffde7; font-style: italic; font-size: 0.9em; text-align: center; padding: 10px; }
+        .label {
+            display: inline-block;
+            font-size: 0.7em;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-bottom: 5px;
+            color: white;
+        }
+        .label-w { background: var(--wyklad); }
+        .label-c { background: var(--cwiczenia); }
+        .label-l { background: var(--lektorat); }
+
+        .time-row { display: flex; justify-content: space-between; font-size: 0.85em; font-weight: bold; color: #555; }
+        .subject { font-size: 1.05em; font-weight: bold; color: #000; margin: 3px 0; }
+        .info-row { font-size: 0.85em; color: #666; }
+        .room-text { color: var(--primary); font-weight: bold; }
+
+        .event { background: #fffde7; padding: 10px; text-align: center; font-style: italic; border-bottom: 1px solid #eee; font-size: 0.9em; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>📅 Marzec 2026</h1>
-</header>
+<header><h1>📅 Mój Plan Zajęć 2026</h1></header>
 
 <div id="schedule">
+
+    <div class="day-section" id="2026-02-23">
+        <div class="date-header"><span>23.02 Poniedziałek</span><span class="today-badge">DZISIAJ</span></div>
+        <div class="classes">
+            <div class="class-item type-lektorat"><span class="label label-l">Lektorat</span><div class="time-row"><span>09:45 - 11:15</span><span class="room-text">Grupa 8</span></div><div class="subject">Język hiszpański A1</div></div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>13:15 - 14:45</span><span class="room-text">Paw.F 109</span></div><div class="subject">Rozwój kompetencji pracowniczych</div><div class="info-row">dr Sylwia Wiśniewska</div></div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>15:00 - 16:30</span><span class="room-text">Paw.F 109</span></div><div class="subject">Zarządzanie wiedzą</div><div class="info-row">prof. dr hab. Bogusz Mikuła</div></div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>16:45 - 18:15</span><span class="room-text">Paw.F 109</span></div><div class="subject">Polikryzys jako nowa normalność</div><div class="info-row">prof. Maria Łuszczyńska</div></div>
+        </div>
+    </div>
+
+    <div class="day-section" id="2026-02-24">
+        <div class="date-header"><span>24.02 Wtorek</span><span class="today-badge">DZISIAJ</span></div>
+        <div class="classes">
+            <div class="class-item type-lektorat"><span class="label label-l">Lektorat</span><div class="time-row"><span>09:45 - 11:15</span><span class="room-text">Grupa 25</span></div><div class="subject">Język angielski B2</div></div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>11:30 - 13:00</span><span class="room-text">Paw.S sala 8</span></div><div class="subject">Instytucje rynkowe</div><div class="info-row">dr Iryna Manczak</div></div>
+            <div class="class-item type-cwiczenia"><span class="label label-c">Ćwiczenia</span><div class="time-row"><span>15:00 - 16:30</span><span class="room-text">Paw.F 414</span></div><div class="subject">Zakładanie i prowadzenie dział. gosp.</div><div class="info-row">mgr Magdalena Prorok</div></div>
+        </div>
+    </div>
 
     <div class="day-section" id="2026-03-02">
         <div class="date-header"><span>02.03 Poniedziałek</span><span class="today-badge">DZISIAJ</span></div>
         <div class="classes">
-            <div class="class-item type-wyklad">
-                <div class="time-row"><span>08:00 - 09:30</span><span class="room">Paw.C sala D</span></div>
-                <div class="subject">Zakładanie i prowadzenie dział. gosp.</div>
-                <div class="teacher">dr Maciej Kędziera</div>
-            </div>
-            <div class="class-item type-lektorat">
-                <div class="time-row"><span>09:45 - 11:15</span><span class="room">Lektorat</span></div>
-                <div class="subject">Język hiszpański A1 (gr. 8)</div>
-            </div>
-            <div class="class-item type-wyklad">
-                <div class="time-row"><span>13:15 - 14:45</span><span class="room">Paw.G 12</span></div>
-                <div class="subject">Miasto w cywilizacji europejskiej</div>
-                <div class="teacher">dr Michał Wiśniewski</div>
-            </div>
-            <div class="class-item type-wyklad">
-                <div class="time-row"><span>15:00 - 16:30</span><span class="room">Paw.F 109</span></div>
-                <div class="subject">Zarządzanie wiedzą</div>
-                <div class="teacher">prof. UEK dr hab. Bogusz Mikuła</div>
-            </div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>08:00 - 09:30</span><span class="room-text">Paw.C sala D</span></div><div class="subject">Zakładanie i prowadzenie dział. gosp.</div><div class="info-row">dr Maciej Kędziera</div></div>
+            <div class="class-item type-lektorat"><span class="label label-l">Lektorat</span><div class="time-row"><span>09:45 - 11:15</span><span class="room-text">Grupa 8</span></div><div class="subject">Język hiszpański A1</div></div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>13:15 - 14:45</span><span class="room-text">Paw.G 12</span></div><div class="subject">Miasto w cywilizacji europejskiej</div><div class="info-row">dr Michał Wiśniewski</div></div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>15:00 - 16:30</span><span class="room-text">Paw.F 109</span></div><div class="subject">Zarządzanie wiedzą</div><div class="info-row">prof. UEK dr hab. Bogusz Mikuła</div></div>
         </div>
     </div>
 
     <div class="day-section" id="2026-03-03">
         <div class="date-header"><span>03.03 Wtorek</span><span class="today-badge">DZISIAJ</span></div>
         <div class="classes">
-            <div class="class-item type-lektorat">
-                <div class="time-row"><span>09:45 - 11:15</span><span class="room">Lektorat</span></div>
-                <div class="subject">Język angielski B2 (gr. 25)</div>
-            </div>
-            <div class="class-item type-cwiczenia">
-                <div class="time-row"><span>11:30 - 13:00</span><span class="room">Paw.F CJ 012</span></div>
-                <div class="subject">Instytucje rynkowe</div>
-                <div class="teacher">dr Iryna Manczak</div>
-            </div>
-            <div class="class-item type-cwiczenia">
-                <div class="time-row"><span>13:15 - 14:45</span><span class="room">Paw.E sala G (KSB)</span></div>
-                <div class="subject">Zarządzanie wiedzą</div>
-                <div class="teacher">dr Maciej Kędziera</div>
-            </div>
-            <div class="class-item type-cwiczenia">
-                <div class="time-row"><span>15:00 - 16:30</span><span class="room">Paw.F 414</span></div>
-                <div class="subject">Zakładanie i prowadzenie dział. gosp.</div>
-                <div class="teacher">mgr Magdalena Prorok</div>
-            </div>
+            <div class="class-item type-lektorat"><span class="label label-l">Lektorat</span><div class="time-row"><span>09:45 - 11:15</span><span class="room-text">Grupa 25</span></div><div class="subject">Język angielski B2</div></div>
+            <div class="class-item type-cwiczenia"><span class="label label-c">Ćwiczenia</span><div class="time-row"><span>11:30 - 13:00</span><span class="room-text">Paw.F CJ 012</span></div><div class="subject">Instytucje rynkowe</div><div class="info-row">dr Iryna Manczak</div></div>
+            <div class="class-item type-cwiczenia"><span class="label label-c">Ćwiczenia</span><div class="time-row"><span>13:15 - 14:45</span><span class="room-text">Paw.E sala G</span></div><div class="subject">Zarządzanie wiedzą</div><div class="info-row">dr Maciej Kędziera</div></div>
+            <div class="class-item type-cwiczenia"><span class="label label-c">Ćwiczenia</span><div class="time-row"><span>15:00 - 16:30</span><span class="room-text">Paw.F 414</span></div><div class="subject">Zakładanie i prowadzenie dział. gosp.</div><div class="info-row">mgr Magdalena Prorok</div></div>
         </div>
     </div>
 
@@ -130,193 +126,83 @@
         <div class="date-header"><span>05.03 Czwartek</span><span class="today-badge">DZISIAJ</span></div>
         <div class="classes">
             <div class="event">11:30 - 14:45 Targi Pracy (Rezerwacja)</div>
-            <div class="class-item type-cwiczenia">
-                <div class="time-row"><span>15:00 - 16:30</span><span class="room">Paw.F 104</span></div>
-                <div class="subject">Rozwój kompetencji pracowniczych</div>
-                <div class="teacher">mgr Marek Koczyński</div>
-            </div>
+            <div class="class-item type-cwiczenia"><span class="label label-c">Ćwiczenia</span><div class="time-row"><span>15:00 - 16:30</span><span class="room-text">Paw.F 104</span></div><div class="subject">Rozwój kompetencji pracowniczych</div><div class="info-row">mgr Marek Koczyński</div></div>
         </div>
     </div>
 
     <div class="day-section" id="2026-03-09">
         <div class="date-header"><span>09.03 Poniedziałek</span><span class="today-badge">DZISIAJ</span></div>
         <div class="classes">
-            <div class="class-item type-lektorat">
-                <div class="time-row"><span>09:45 - 11:15</span><span class="room">Lektorat</span></div>
-                <div class="subject">Język hiszpański A1 (gr. 8)</div>
-            </div>
-            <div class="class-item type-wyklad">
-                <div class="time-row"><span>13:15 - 14:45</span><span class="room">Paw.F 109</span></div>
-                <div class="subject">Rozwój kompetencji pracowniczych</div>
-                <div class="teacher">dr Sylwia Wiśniewska</div>
-            </div>
-            <div class="class-item type-wyklad">
-                <div class="time-row"><span>15:00 - 16:30</span><span class="room">Paw.F 109</span></div>
-                <div class="subject">Zarządzanie wiedzą</div>
-                <div class="teacher">prof. UEK dr hab. Bogusz Mikuła</div>
-            </div>
-            <div class="class-item type-wyklad">
-                <div class="time-row"><span>16:45 - 18:15</span><span class="room">Paw.F 109</span></div>
-                <div class="subject">Polikryzys jako nowa normalność...</div>
-                <div class="teacher">prof. Maria Łuszczyńska</div>
-            </div>
+            <div class="class-item type-lektorat"><span class="label label-l">Lektorat</span><div class="time-row"><span>09:45 - 11:15</span><span class="room-text">Grupa 8</span></div><div class="subject">Język hiszpański A1</div></div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>13:15 - 14:45</span><span class="room-text">Paw.F 109</span></div><div class="subject">Rozwój kompetencji pracowniczych</div><div class="info-row">dr Sylwia Wiśniewska</div></div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>15:00 - 16:30</span><span class="room-text">Paw.F 109</span></div><div class="subject">Zarządzanie wiedzą</div><div class="info-row">prof. UEK dr hab. Bogusz Mikuła</div></div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>16:45 - 18:15</span><span class="room-text">Paw.F 109</span></div><div class="subject">Polikryzys jako nowa normalność</div><div class="info-row">prof. Maria Łuszczyńska</div></div>
         </div>
     </div>
 
     <div class="day-section" id="2026-03-10">
         <div class="date-header"><span>10.03 Wtorek</span><span class="today-badge">DZISIAJ</span></div>
         <div class="classes">
-            <div class="class-item type-lektorat">
-                <div class="time-row"><span>09:45 - 11:15</span><span class="room">Lektorat</span></div>
-                <div class="subject">Język angielski B2 (gr. 25)</div>
-            </div>
-            <div class="class-item type-wyklad">
-                <div class="time-row"><span>11:30 - 13:00</span><span class="room">Paw.S sala 8</span></div>
-                <div class="subject">Instytucje rynkowe</div>
-                <div class="teacher">dr Iryna Manczak</div>
-            </div>
-            <div class="class-item type-cwiczenia">
-                <div class="time-row"><span>15:00 - 16:30</span><span class="room">Paw.F 414</span></div>
-                <div class="subject">Zakładanie i prowadzenie dział. gosp.</div>
-                <div class="teacher">mgr Magdalena Prorok</div>
-            </div>
+            <div class="class-item type-lektorat"><span class="label label-l">Lektorat</span><div class="time-row"><span>09:45 - 11:15</span><span class="room-text">Grupa 25</span></div><div class="subject">Język angielski B2</div></div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>11:30 - 13:00</span><span class="room-text">Paw.S sala 8</span></div><div class="subject">Instytucje rynkowe</div><div class="info-row">dr Iryna Manczak</div></div>
+            <div class="class-item type-cwiczenia"><span class="label label-c">Ćwiczenia</span><div class="time-row"><span>15:00 - 16:30</span><span class="room-text">Paw.F 414</span></div><div class="subject">Zakładanie i prowadzenie dział. gosp.</div><div class="info-row">mgr Magdalena Prorok</div></div>
         </div>
     </div>
 
     <div class="day-section" id="2026-03-12">
         <div class="date-header"><span>12.03 Czwartek</span><span class="today-badge">DZISIAJ</span></div>
         <div class="classes">
-            <div class="class-item type-cwiczenia">
-                <div class="time-row"><span>13:15 - 14:45</span><span class="room">Paw.F CJ 301</span></div>
-                <div class="subject">Rozwój kompetencji pracowniczych</div>
-                <div class="teacher">mgr Marek Koczyński</div>
-            </div>
+            <div class="class-item type-cwiczenia"><span class="label label-c">Ćwiczenia</span><div class="time-row"><span>13:15 - 14:45</span><span class="room-text">Paw.F CJ 301</span></div><div class="subject">Rozwój kompetencji pracowniczych</div><div class="info-row">mgr Marek Koczyński</div></div>
         </div>
     </div>
 
     <div class="day-section" id="2026-03-16">
         <div class="date-header"><span>16.03 Poniedziałek</span><span class="today-badge">DZISIAJ</span></div>
         <div class="classes">
-            <div class="class-item type-wyklad">
-                <div class="time-row"><span>08:00 - 09:30</span><span class="room">Paw.C sala D</span></div>
-                <div class="subject">Zakładanie i prowadzenie dział. gosp.</div>
-                <div class="teacher">dr Maciej Kędziera</div>
-            </div>
-            <div class="class-item type-lektorat">
-                <div class="time-row"><span>09:45 - 11:15</span><span class="room">Lektorat</span></div>
-                <div class="subject">Język hiszpański A1 (gr. 8)</div>
-            </div>
-            <div class="class-item type-wyklad">
-                <div class="time-row"><span>13:15 - 14:45</span><span class="room">Paw.G 12</span></div>
-                <div class="subject">Miasto w cywilizacji europejskiej</div>
-                <div class="teacher">dr Michał Wiśniewski</div>
-            </div>
-            <div class="class-item type-wyklad">
-                <div class="time-row"><span>15:00 - 16:30</span><span class="room">Paw.F 109</span></div>
-                <div class="subject">Zarządzanie wiedzą</div>
-                <div class="teacher">prof. UEK dr hab. Bogusz Mikuła</div>
-            </div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>08:00 - 09:30</span><span class="room-text">Paw.C sala D</span></div><div class="subject">Zakładanie i prowadzenie dział. gosp.</div><div class="info-row">dr Maciej Kędziera</div></div>
+            <div class="class-item type-lektorat"><span class="label label-l">Lektorat</span><div class="time-row"><span>09:45 - 11:15</span><span class="room-text">Grupa 8</span></div><div class="subject">Język hiszpański A1</div></div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>13:15 - 14:45</span><span class="room-text">Paw.G 12</span></div><div class="subject">Miasto w cywilizacji europejskiej</div><div class="info-row">dr Michał Wiśniewski</div></div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>15:00 - 16:30</span><span class="room-text">Paw.F 109</span></div><div class="subject">Zarządzanie wiedzą</div><div class="info-row">prof. UEK dr hab. Bogusz Mikuła</div></div>
         </div>
     </div>
 
     <div class="day-section" id="2026-03-17">
         <div class="date-header"><span>17.03 Wtorek</span><span class="today-badge">DZISIAJ</span></div>
         <div class="classes">
-            <div class="class-item type-lektorat">
-                <div class="time-row"><span>09:45 - 11:15</span><span class="room">Lektorat</span></div>
-                <div class="subject">Język angielski B2 (gr. 25)</div>
-            </div>
-            <div class="class-item type-cwiczenia">
-                <div class="time-row"><span>11:30 - 13:00</span><span class="room">Paw.F CJ 012</span></div>
-                <div class="subject">Instytucje rynkowe</div>
-                <div class="teacher">dr Iryna Manczak</div>
-            </div>
-            <div class="class-item type-cwiczenia">
-                <div class="time-row"><span>13:15 - 14:45</span><span class="room">Paw.E sala G (KSB)</span></div>
-                <div class="subject">Zarządzanie wiedzą</div>
-                <div class="teacher">dr Maciej Kędziera</div>
-            </div>
-            <div class="class-item type-cwiczenia">
-                <div class="time-row"><span>15:00 - 16:30</span><span class="room">Paw.F 414</span></div>
-                <div class="subject">Zakładanie i prowadzenie dział. gosp.</div>
-                <div class="teacher">mgr Magdalena Prorok</div>
-            </div>
+            <div class="class-item type-lektorat"><span class="label label-l">Lektorat</span><div class="time-row"><span>09:45 - 11:15</span><span class="room-text">Grupa 25</span></div><div class="subject">Język angielski B2</div></div>
+            <div class="class-item type-cwiczenia"><span class="label label-c">Ćwiczenia</span><div class="time-row"><span>11:30 - 13:00</span><span class="room-text">Paw.F CJ 012</span></div><div class="subject">Instytucje rynkowe</div><div class="info-row">dr Iryna Manczak</div></div>
+            <div class="class-item type-cwiczenia"><span class="label label-c">Ćwiczenia</span><div class="time-row"><span>13:15 - 14:45</span><span class="room-text">Paw.E sala G</span></div><div class="subject">Zarządzanie wiedzą</div><div class="info-row">dr Maciej Kędziera</div></div>
+            <div class="class-item type-cwiczenia"><span class="label label-c">Ćwiczenia</span><div class="time-row"><span>15:00 - 16:30</span><span class="room-text">Paw.F 414</span></div><div class="subject">Zakładanie i prowadzenie dział. gosp.</div><div class="info-row">mgr Magdalena Prorok</div></div>
         </div>
     </div>
 
     <div class="day-section" id="2026-03-19">
         <div class="date-header"><span>19.03 Czwartek</span><span class="today-badge">DZISIAJ</span></div>
         <div class="classes">
-            <div class="class-item type-wyklad">
-                <div class="time-row"><span>08:00 - 09:30</span><span class="room">Paw.F 109</span></div>
-                <div class="subject">Marketing produktów innowacyjnych</div>
-                <div class="teacher">dr Tomasz Smoleń</div>
-            </div>
-            <div class="class-item type-cwiczenia">
-                <div class="time-row"><span>11:30 - 13:00</span><span class="room">Paw.F 109</span></div>
-                <div class="subject">Marketing produktów innowacyjnych</div>
-                <div class="teacher">dr Tomasz Smoleń</div>
-            </div>
-            <div class="class-item type-cwiczenia">
-                <div class="time-row"><span>13:15 - 14:45</span><span class="room">Paw.F CJ 301</span></div>
-                <div class="subject">Rozwój kompetencji pracowniczych</div>
-                <div class="teacher">mgr Marek Koczyński</div>
-            </div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>08:00 - 09:30</span><span class="room-text">Paw.F 109</span></div><div class="subject">Marketing produktów innowacyjnych</div><div class="info-row">dr Tomasz Smoleń</div></div>
+            <div class="class-item type-cwiczenia"><span class="label label-c">Ćwiczenia</span><div class="time-row"><span>11:30 - 13:00</span><span class="room-text">Paw.F 109</span></div><div class="subject">Marketing produktów innowacyjnych</div><div class="info-row">dr Tomasz Smoleń</div></div>
+            <div class="class-item type-cwiczenia"><span class="label label-c">Ćwiczenia</span><div class="time-row"><span>13:15 - 14:45</span><span class="room-text">Paw.F CJ 301</span></div><div class="subject">Rozwój kompetencji pracowniczych</div><div class="info-row">mgr Marek Koczyński</div></div>
         </div>
     </div>
 
     <div class="day-section" id="2026-03-23">
         <div class="date-header"><span>23.03 Poniedziałek</span><span class="today-badge">DZISIAJ</span></div>
         <div class="classes">
-            <div class="class-item type-lektorat">
-                <div class="time-row"><span>09:45 - 11:15</span><span class="room">Lektorat</span></div>
-                <div class="subject">Język hiszpański A1 (gr. 8)</div>
-            </div>
-            <div class="class-item type-wyklad">
-                <div class="time-row"><span>13:15 - 14:45</span><span class="room">Paw.F 109</span></div>
-                <div class="subject">Rozwój kompetencji pracowniczych</div>
-                <div class="teacher">dr Sylwia Wiśniewska</div>
-            </div>
-            <div class="class-item type-wyklad">
-                <div class="time-row"><span>15:00 - 16:30</span><span class="room">Paw.F 109</span></div>
-                <div class="subject">Zarządzanie wiedzą</div>
-                <div class="teacher">prof. UEK dr hab. Bogusz Mikuła</div>
-            </div>
-            <div class="class-item type-wyklad">
-                <div class="time-row"><span>16:45 - 18:15</span><span class="room">Paw.F 109</span></div>
-                <div class="subject">Polikryzys jako nowa normalność...</div>
-                <div class="teacher">prof. Maria Łuszczyńska</div>
-            </div>
+            <div class="class-item type-lektorat"><span class="label label-l">Lektorat</span><div class="time-row"><span>09:45 - 11:15</span><span class="room-text">Grupa 8</span></div><div class="subject">Język hiszpański A1</div></div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>13:15 - 14:45</span><span class="room-text">Paw.F 109</span></div><div class="subject">Rozwój kompetencji pracowniczych</div><div class="info-row">dr Sylwia Wiśniewska</div></div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>15:00 - 16:30</span><span class="room-text">Paw.F 109</span></div><div class="subject">Zarządzanie wiedzą</div><div class="info-row">prof. UEK dr hab. Bogusz Mikuła</div></div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>16:45 - 18:15</span><span class="room-text">Paw.F 109</span></div><div class="subject">Polikryzys jako nowa normalność</div><div class="info-row">prof. Maria Łuszczyńska</div></div>
         </div>
     </div>
 
     <div class="day-section" id="2026-03-24">
         <div class="date-header"><span>24.03 Wtorek</span><span class="today-badge">DZISIAJ</span></div>
         <div class="classes">
-            <div class="class-item type-lektorat">
-                <div class="time-row"><span>09:45 - 11:15</span><span class="room">Lektorat</span></div>
-                <div class="subject">Język angielski B2 (gr. 25)</div>
-            </div>
-            <div class="class-item type-wyklad">
-                <div class="time-row"><span>11:30 - 13:00</span><span class="room">Paw.S sala 8</span></div>
-                <div class="subject">Instytucje rynkowe</div>
-                <div class="teacher">dr Iryna Manczak</div>
-            </div>
-            <div class="class-item type-cwiczenia">
-                <div class="time-row"><span>13:15 - 14:45</span><span class="room">Paw.G 9</span></div>
-                <div class="subject">Marketing produktów innowacyjnych</div>
-                <div class="teacher">dr Tomasz Smoleń</div>
-            </div>
-            <div class="class-item type-cwiczenia">
-                <div class="time-row"><span>15:00 - 16:30</span><span class="room">Paw.F 414</span></div>
-                <div class="subject">Zakładanie i prowadzenie dział. gosp.</div>
-                <div class="teacher">mgr Magdalena Prorok</div>
-            </div>
-            <div class="class-item type-cwiczenia">
-                <div class="time-row"><span>16:45 - 18:15</span><span class="room">Paw.E sala G (KSB)</span></div>
-                <div class="subject">Rozwój kompetencji pracowniczych</div>
-                <div class="teacher">mgr Marek Koczyński</div>
-            </div>
+            <div class="class-item type-lektorat"><span class="label label-l">Lektorat</span><div class="time-row"><span>09:45 - 11:15</span><span class="room-text">Grupa 25</span></div><div class="subject">Język angielski B2</div></div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>11:30 - 13:00</span><span class="room-text">Paw.S sala 8</span></div><div class="subject">Instytucje rynkowe</div><div class="info-row">dr Iryna Manczak</div></div>
+            <div class="class-item type-cwiczenia"><span class="label label-c">Ćwiczenia</span><div class="time-row"><span>13:15 - 14:45</span><span class="room-text">Paw.G 9</span></div><div class="subject">Marketing produktów innowacyjnych</div><div class="info-row">dr Tomasz Smoleń</div></div>
+            <div class="class-item type-cwiczenia"><span class="label label-c">Ćwiczenia</span><div class="time-row"><span>15:00 - 16:30</span><span class="room-text">Paw.F 414</span></div><div class="subject">Zakładanie i prowadzenie dział. gosp.</div><div class="info-row">mgr Magdalena Prorok</div></div>
+            <div class="class-item type-cwiczenia"><span class="label label-c">Ćwiczenia</span><div class="time-row"><span>16:45 - 18:15</span><span class="room-text">Paw.E sala G</span></div><div class="subject">Rozwój kompetencji pracowniczych</div><div class="info-row">mgr Marek Koczyński</div></div>
         </div>
     </div>
 
@@ -324,14 +210,11 @@
         <div class="date-header"><span>25.03 Środa</span><span class="today-badge">DZISIAJ</span></div>
         <div class="classes"><div class="event">09:45 - 13:00 Dzień otwarty dla kandydatów</div></div>
     </div>
+
     <div class="day-section" id="2026-03-26">
         <div class="date-header"><span>26.03 Czwartek</span><span class="today-badge">DZISIAJ</span></div>
         <div class="classes">
-            <div class="class-item type-wyklad">
-                <div class="time-row"><span>08:00 - 09:30</span><span class="room">Paw.F 109</span></div>
-                <div class="subject">Marketing produktów innowacyjnych</div>
-                <div class="teacher">dr Tomasz Smoleń</div>
-            </div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>08:00 - 09:30</span><span class="room-text">Paw.F 109</span></div><div class="subject">Marketing produktów innowacyjnych</div><div class="info-row">dr Tomasz Smoleń</div></div>
             <div class="event">11:30 - 16:30 Dzień otwarty dla kandydatów</div>
         </div>
     </div>
@@ -339,55 +222,21 @@
     <div class="day-section" id="2026-03-30">
         <div class="date-header"><span>30.03 Poniedziałek</span><span class="today-badge">DZISIAJ</span></div>
         <div class="classes">
-            <div class="class-item type-wyklad">
-                <div class="time-row"><span>08:00 - 09:30</span><span class="room">Paw.C sala D</span></div>
-                <div class="subject">Zakładanie i prowadzenie dział. gosp.</div>
-                <div class="teacher">dr Maciej Kędziera</div>
-            </div>
-            <div class="class-item type-lektorat">
-                <div class="time-row"><span>09:45 - 11:15</span><span class="room">Lektorat</span></div>
-                <div class="subject">Język hiszpański A1 (gr. 8)</div>
-            </div>
-            <div class="class-item type-wyklad">
-                <div class="time-row"><span>13:15 - 14:45</span><span class="room">Paw.G 12</span></div>
-                <div class="subject">Miasto w cywilizacji europejskiej</div>
-                <div class="teacher">dr Michał Wiśniewski</div>
-            </div>
-            <div class="class-item type-wyklad">
-                <div class="time-row"><span>15:00 - 16:30</span><span class="room">Paw.F 109</span></div>
-                <div class="subject">Zarządzanie wiedzą</div>
-                <div class="teacher">prof. UEK dr hab. Bogusz Mikuła</div>
-            </div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>08:00 - 09:30</span><span class="room-text">Paw.C sala D</span></div><div class="subject">Zakładanie i prowadzenie dział. gosp.</div><div class="info-row">dr Maciej Kędziera</div></div>
+            <div class="class-item type-lektorat"><span class="label label-l">Lektorat</span><div class="time-row"><span>09:45 - 11:15</span><span class="room-text">Grupa 8</span></div><div class="subject">Język hiszpański A1</div></div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>13:15 - 14:45</span><span class="room-text">Paw.G 12</span></div><div class="subject">Miasto w cywilizacji europejskiej</div><div class="info-row">dr Michał Wiśniewski</div></div>
+            <div class="class-item type-wyklad"><span class="label label-w">Wykład</span><div class="time-row"><span>15:00 - 16:30</span><span class="room-text">Paw.F 109</span></div><div class="subject">Zarządzanie wiedzą</div><div class="info-row">prof. UEK dr hab. Bogusz Mikuła</div></div>
         </div>
     </div>
 
     <div class="day-section" id="2026-03-31">
         <div class="date-header"><span>31.03 Wtorek</span><span class="today-badge">DZISIAJ</span></div>
         <div class="classes">
-            <div class="class-item type-cwiczenia">
-                <div class="time-row"><span>08:00 - 09:30</span><span class="room">Paw.B 351</span></div>
-                <div class="subject">Rozwój kompetencji pracowniczych</div>
-                <div class="teacher">mgr Marek Koczyński</div>
-            </div>
-            <div class="class-item type-lektorat">
-                <div class="time-row"><span>09:45 - 11:15</span><span class="room">Lektorat</span></div>
-                <div class="subject">Język angielski B2 (gr. 25)</div>
-            </div>
-            <div class="class-item type-cwiczenia">
-                <div class="time-row"><span>11:30 - 13:00</span><span class="room">Paw.F CJ 012</span></div>
-                <div class="subject">Instytucje rynkowe</div>
-                <div class="teacher">dr Iryna Manczak</div>
-            </div>
-            <div class="class-item type-cwiczenia">
-                <div class="time-row"><span>13:15 - 14:45</span><span class="room">Paw.E sala G (KSB)</span></div>
-                <div class="subject">Zarządzanie wiedzą</div>
-                <div class="teacher">dr Maciej Kędziera</div>
-            </div>
-            <div class="class-item type-cwiczenia">
-                <div class="time-row"><span>15:00 - 16:30</span><span class="room">Paw.F 414</span></div>
-                <div class="subject">Zakładanie i prowadzenie dział. gosp.</div>
-                <div class="teacher">mgr Magdalena Prorok</div>
-            </div>
+            <div class="class-item type-cwiczenia"><span class="label label-c">Ćwiczenia</span><div class="time-row"><span>08:00 - 09:30</span><span class="room-text">Paw.B 351</span></div><div class="subject">Rozwój kompetencji pracowniczych</div><div class="info-row">mgr Marek Koczyński</div></div>
+            <div class="class-item type-lektorat"><span class="label label-l">Lektorat</span><div class="time-row"><span>09:45 - 11:15</span><span class="room-text">Grupa 25</span></div><div class="subject">Język angielski B2</div></div>
+            <div class="class-item type-cwiczenia"><span class="label label-c">Ćwiczenia</span><div class="time-row"><span>11:30 - 13:00</span><span class="room-text">Paw.F CJ 012</span></div><div class="subject">Instytucje rynkowe</div><div class="info-row">dr Iryna Manczak</div></div>
+            <div class="class-item type-cwiczenia"><span class="label label-c">Ćwiczenia</span><div class="time-row"><span>13:15 - 14:45</span><span class="room-text">Paw.E sala G</span></div><div class="subject">Zarządzanie wiedzą</div><div class="info-row">dr Maciej Kędziera</div></div>
+            <div class="class-item type-cwiczenia"><span class="label label-c">Ćwiczenia</span><div class="time-row"><span>15:00 - 16:30</span><span class="room-text">Paw.F 414</span></div><div class="subject">Zakładanie i prowadzenie dział. gosp.</div><div class="info-row">mgr Magdalena Prorok</div></div>
         </div>
     </div>
 
@@ -398,13 +247,10 @@
         const now = new Date();
         const offset = now.getTimezoneOffset() * 60000;
         const localISOTime = (new Date(now - offset)).toISOString().slice(0, 10);
-        
         const todayEl = document.getElementById(localISOTime);
         if (todayEl) {
             todayEl.classList.add('today');
-            setTimeout(() => {
-                todayEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 500);
+            setTimeout(() => { todayEl.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 500);
         }
     }
     window.onload = scrollToday;
